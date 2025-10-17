@@ -4,8 +4,8 @@ import jakarta.persistence.*;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import com.ApiFactory.ApiFactory.domain.Contract;
 
-import org.springframework.lang.Contract;
 
 @Entity
 @Table(name = "clients")
