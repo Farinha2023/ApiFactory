@@ -1,4 +1,4 @@
-package com.ApiFactory.ApiFactory.Domain;
+package com.ApiFactory.ApiFactory.domain;
 
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
