@@ -40,4 +40,19 @@ public class Contract {
     }
 
     // getters and setters
+    public Client getClient() {
+    return client;
+    }
+
+    public void setClient(Client client) {
+    this.client = client;
+    }
+
+    public LocalDate getEndDate() {
+        return  endDate;
+    }
+
+    public void setEndDate(LocalDate newDate) {
+          this.endDate = newDate;
+    }
 }

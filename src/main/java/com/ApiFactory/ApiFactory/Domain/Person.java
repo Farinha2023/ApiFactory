@@ -9,5 +9,13 @@ import java.time.LocalDate;
 public class Person extends Client {
 
      private LocalDate birthDate;
-    // getter/setter
+
+     // getter/setter
+     public void setBirthDate(LocalDate newBirthDate) {
+        this.birthDate = newBirthDate;
+     }
+
+     public LocalDate getBirthDate() {
+         return this.birthDate;
+    }
 }

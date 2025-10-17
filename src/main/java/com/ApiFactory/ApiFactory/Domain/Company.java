@@ -8,5 +8,12 @@ import jakarta.persistence.Entity;
 public class Company extends Client{
 
      private String companyIdentifier; // example abc-911
+
     // getter/setter
+    public String getCompanyIdentifier() {
+        return this.companyIdentifier;
+    }
+     public void setCompanyIdentifier(String newIdentifier) {
+        this.companyIdentifier = newIdentifier;
+     }
 }

@@ -24,5 +24,22 @@ public class ClientCreateDto {
     @Pattern(regexp = "^[a-z]{3}-\\d{3}$", message = "companyIdentifier must match aaa-123")
     private String companyIdentifier;
 
-    // getters and setters
+    public String getType() { return type; }
+    public void setType(String type) { this.type = type; }
+
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+
+    public String getPhone() { return phone; }
+    public void setPhone(String phone) { this.phone = phone; }
+
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
+
+    public LocalDate getBirthDate() { return birthDate; }
+    public void setBirthDate(LocalDate birthDate) { this.birthDate = birthDate; }
+
+    public String getCompanyIdentifier() { return companyIdentifier; }
+    public void setCompanyIdentifier(String companyIdentifier) { this.companyIdentifier = companyIdentifier; }
+
 }
