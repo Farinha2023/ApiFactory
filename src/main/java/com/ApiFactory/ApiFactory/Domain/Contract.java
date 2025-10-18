@@ -40,19 +40,44 @@ public class Contract {
     }
 
     // getters and setters
+
+    public Long getId() {
+        return id;
+    }
+
     public Client getClient() {
-    return client;
+        return client;
     }
 
     public void setClient(Client client) {
-    this.client = client;
+        this.client = client;
+    }
+
+    public LocalDate getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(LocalDate startDate) {
+        this.startDate = startDate;
     }
 
     public LocalDate getEndDate() {
-        return  endDate;
+        return endDate;
     }
 
-    public void setEndDate(LocalDate newDate) {
-          this.endDate = newDate;
+    public void setEndDate(LocalDate endDate) {
+        this.endDate = endDate;
+    }
+
+    public BigDecimal getCostAmount() {
+        return costAmount;
+    }
+
+    public void setCostAmount(BigDecimal costAmount) {
+        this.costAmount = costAmount;
+    }
+
+    public OffsetDateTime getUpdatedOn() {
+        return updatedOn;
     }
 }
