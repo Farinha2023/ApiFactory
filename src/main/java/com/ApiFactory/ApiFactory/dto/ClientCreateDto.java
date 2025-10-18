@@ -15,14 +15,26 @@ public class ClientCreateDto {
     @Pattern(regexp = "^\\+?\\d{7,15}$", message = "Phone must be 7-15 digits, optional +")
     private String phone;
 
-    @NotBlank @Email
+    @NotBlank
+    @Email
     private String email;
 
-    @Past
-    private LocalDate birthDate; // only for PERSON
+    @Past(message = "Birthdate must be in the past")
+    private LocalDate birthDate;
 
-    @Pattern(regexp = "^[a-z]{3}-\\d{3}$", message = "companyIdentifier must match aaa-123")
+    @Pattern(regexp = "^[a-z]{3}-\\d{3}$", message = "CompanyIdentifier must match aaa-123")
     private String companyIdentifier;
+
+
+    @AssertTrue(message = "birthDate is required for PERSON type")
+    public boolean isBirthDateValidForPerson() {
+        return !"PERSON".equalsIgnoreCase(type) || birthDate != null;
+    }
+
+    @AssertTrue(message = "companyIdentifier is required for COMPANY type")
+    public boolean isCompanyIdentifierValidForCompany() {
+        return !"COMPANY".equalsIgnoreCase(type) || (companyIdentifier != null && !companyIdentifier.isBlank());
+    }
 
     public String getType() { return type; }
     public void setType(String type) { this.type = type; }

@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import com.ApiFactory.ApiFactory.domain.Contract;
+
 
 
 @Entity
