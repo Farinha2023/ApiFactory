@@ -1,7 +1,7 @@
 spring:
   datasource:
     url: jdbc:h2:file:./data/ApiDB;AUTO_SERVER=TRUE
-    driverClassName: org.h2.Driver
+    driver-class-name: org.h2.Driver
     username: sa
     password:
   jpa:
@@ -14,8 +14,3 @@ spring:
   h2:
     console:
       enabled: true
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info
