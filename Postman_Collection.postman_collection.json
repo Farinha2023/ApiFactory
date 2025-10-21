@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "035c0cea-e540-40e0-89cc-7deb8caefa8e",
+		"name": "Postman_Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "49383408",
+		"_collection_link": "https://farinha2023-9797993.postman.co/workspace/AgathaS's-Workspace~9be4d17c-cec1-410e-8186-4b8f188ed142/collection/49383408-035c0cea-e540-40e0-89cc-7deb8caefa8e?action=share&source=collection_link&creator=49383408"
+	},
+	"item": [
+		{
+			"name": "CreateClientPerson",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "Content-Type: application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"type\": \"PERSON\",\r\n\"name\": \"Michael Jackson\",\r\n\"phone\": \"+41791112233\",\r\n\"email\": \"michael@example.com\",\r\n\"birthDate\": \"1991-06-15\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/clients"
+			},
+			"response": []
+		},
+		{
+			"name": "ReadClientPersonID35",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/clients/35"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteClientID1",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/clients/1"
+			},
+			"response": []
+		},
+		{
+			"name": "CreateContractForClient",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "Content-Type: application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"costAmount\": 199.99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/clients/2/contracts"
+			},
+			"response": []
+		}
+	]
+}
