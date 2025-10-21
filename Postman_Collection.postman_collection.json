@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "035c0cea-e540-40e0-89cc-7deb8caefa8e",
 		"name": "Postman_Collection",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "49383408",
 		"_collection_link": "https://farinha2023-9797993.postman.co/workspace/AgathaS's-Workspace~9be4d17c-cec1-410e-8186-4b8f188ed142/collection/49383408-035c0cea-e540-40e0-89cc-7deb8caefa8e?action=share&source=collection_link&creator=49383408"
 	},
@@ -27,7 +27,51 @@
 						}
 					}
 				},
-				"url": "http://localhost:8080/clients"
+				"url": {
+					"raw": "http://localhost:8080/clients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateClientCompany",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "Content-Type: application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"type\": \"COMPANY\",\r\n\"name\": \"Globex Corp\",\r\n\"phone\": \"+41792223344\",\r\n\"email\": \"contact@globex.com\",\r\n\"companyIdentifier\": \"aaa-123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clients"
+					]
+				}
 			},
 			"response": []
 		},
@@ -39,7 +83,94 @@
 				},
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:8080/clients/35"
+				"url": {
+					"raw": "http://localhost:8080/clients/35",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clients",
+						"35"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateClientPerson",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "",
+						"value": "Content-Type: application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"type\": \"PERSON\",\r\n\"name\": \"michael Modifiée\",\r\n\"phone\": \"+41793334455\",\r\n\"email\": \"jackson@example.com\",\r\n\"birthDate\": \"2000-06-15\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clients/35",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clients",
+						"35"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateClientCompany",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "",
+						"value": "Content-Type: application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"type\": \"COMPANY\",\r\n\"name\": \"Globex Corp\",\r\n\"phone\": \"+41792223377\",\r\n\"email\": \"contact.newEmail@globex.com\",\r\n\"companyIdentifier\": \"bbb-123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clients/36",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clients",
+						"36"
+					]
+				}
 			},
 			"response": []
 		},
@@ -51,7 +182,18 @@
 				},
 				"method": "DELETE",
 				"header": [],
-				"url": "http://localhost:8080/clients/1"
+				"url": {
+					"raw": "http://localhost:8080/clients/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clients",
+						"1"
+					]
+				}
 			},
 			"response": []
 		},
@@ -78,7 +220,154 @@
 						}
 					}
 				},
-				"url": "http://localhost:8080/clients/2/contracts"
+				"url": {
+					"raw": "http://localhost:8080/clients/2/contracts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clients",
+						"2",
+						"contracts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateContractForClientAgain",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "Content-Type: application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"costAmount\": 50.50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clients/2/contracts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clients",
+						"2",
+						"contracts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateContractForClient",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "",
+						"value": "Content-Type: application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/contracts/4/cost?cost=349.99",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contracts",
+						"4",
+						"cost"
+					],
+					"query": [
+						{
+							"key": "cost",
+							"value": "349.99"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllContractsOFClient",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "Content-Type: application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/clients/2/contracts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clients",
+						"2",
+						"contracts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SumOFContractsForAClient",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "Content-Type: application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/clients/2/contracts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clients",
+						"2",
+						"contracts"
+					]
+				}
 			},
 			"response": []
 		}
